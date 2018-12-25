@@ -10,7 +10,7 @@ namespace server.Models
         [Required]
         public string NDBNumber { get; set; }
         [Required]
-        public int SequenceNumber { get; set; }
+        public string SequenceNumber { get; set; }
         [Required]
         public double Amount { get; set; }
         [Required]
