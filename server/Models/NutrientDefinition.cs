@@ -1,11 +1,13 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace server.Models
 {
     public class NutrientDefinition
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string NutrientDefinitionId { get; set; } // Nutr_No
         [Required]
         public string Units { get; set; } // Units
