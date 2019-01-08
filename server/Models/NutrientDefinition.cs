@@ -15,6 +15,6 @@ namespace server.Models
         [Required]
         public int Decimals { get; set; } // Num_Dec
         [Required]
-        public string SortOrder { get; set; }
+        public string SortOrder { get; set; } // SR_Order
     }
 }
