@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
-using server.Controllers;
-using server.Models;
+using src.Controllers;
+using src.Models;
 using src.Repositories;
 using Xunit;
 

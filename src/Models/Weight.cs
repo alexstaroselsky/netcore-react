@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace server.Models
+namespace src.Models
 {
     public class Weight
     {

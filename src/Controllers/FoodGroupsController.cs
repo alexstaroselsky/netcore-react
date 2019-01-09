@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using server.Models;
+using src.Models;
 using src.Repositories;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace server.Controllers
+namespace src.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/food-groups")]
     public class FoodGroupsController : Controller
     {
         private readonly IFoodGroupRepository _foodGroupRepository;
@@ -22,6 +22,8 @@ namespace server.Controllers
 
         // GET: api/foodgroups
         [HttpGet]
+        [Produces("application/json")]
+        [ProducesResponseType(200, Type = typeof(List<FoodGroup>))]
         public async Task<ActionResult> Get()
         {
             var foodGroups = await _foodGroupRepository.ListAsync();
