@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using src.Models;
+using NutritionaData.Backend.Models;
 
-namespace src.Repositories
+namespace NutritionaData.Backend.Repositories
 {
     public class FoodGroupRepository : IFoodGroupRepository
     {

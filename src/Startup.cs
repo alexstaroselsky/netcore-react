@@ -10,10 +10,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using src.Repositories;
+using NutritionaData.Backend.Repositories;
 using Swashbuckle.AspNetCore.Swagger;
 
-namespace server
+namespace NutritionaData.Backend
 {
     public class Startup
     {

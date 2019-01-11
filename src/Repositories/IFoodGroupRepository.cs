@@ -1,9 +1,8 @@
-﻿using System;
+﻿using NutritionaData.Backend.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using src.Models;
 
-namespace src.Repositories
+namespace NutritionaData.Backend.Repositories
 {
     public interface IFoodGroupRepository
     {

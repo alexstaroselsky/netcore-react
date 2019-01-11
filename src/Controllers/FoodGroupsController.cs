@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using src.Models;
-using src.Repositories;
+using NutritionaData.Backend.Models;
+using NutritionaData.Backend.Repositories;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace src.Controllers
+namespace NutritionaData.Backend.Controllers
 {
     [Route("api/food-groups")]
     public class FoodGroupsController : Controller

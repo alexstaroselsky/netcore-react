@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace server_tests
+namespace NutritionalData.Backend.Tests
 {
     public class UnitTest1
     {

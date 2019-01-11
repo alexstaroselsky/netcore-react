@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace src.Models
+namespace NutritionaData.Backend.Models
 {
     public class Weight
     {

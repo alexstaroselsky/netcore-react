@@ -1,14 +1,12 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using Moq;
+using NutritionaData.Backend.Models;
+using NutritionaData.Backend.Repositories;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Moq;
-using src.Controllers;
-using src.Models;
-using src.Repositories;
 using Xunit;
 
-namespace server_tests.Controllers
+namespace NutritionaData.Backend.Controllers
 {
     public class FoodGroupsControllerTests
     {
