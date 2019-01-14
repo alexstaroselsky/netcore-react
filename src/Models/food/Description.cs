@@ -2,6 +2,7 @@
 {
     public class Description
     {
+        public string DescriptionId { get; set; }
         public string Name { get; set; }
         public string ShortDescription { get; set; }
         public string FoodGroup { get; set; }

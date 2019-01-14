@@ -2,6 +2,7 @@
 {
     public class Measure
     {
+        public string MeasureId { get; set; }
         public string Label { get; set; }
         public decimal Equivalent { get; set; }
         public string EUnit { get; set; }
