@@ -22,4 +22,7 @@
   <ItemGroup>
     <ProjectReference Include="..\src\NutritionData.Backend.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="UnitTest1.cs" />
+  </ItemGroup>
 </Project>
