@@ -7,10 +7,6 @@
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
     <StartAction>Project</StartAction>
-    <EnvironmentVariables>
-      <Variable name="ASPNETCORE_ENVIRONMENT" value="Development" />
-      <Variable name="ASPNETCORE_ENVIRONMENT" value="Development" />
-    </EnvironmentVariables>
     <LaunchUrl>swagger</LaunchUrl>
     <ApplicationURL>http://localhost:5000</ApplicationURL>
   </PropertyGroup>
@@ -18,10 +14,13 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.1" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Repositories\" />
+    <Folder Include="Data\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Controllers\ValuesController.cs" />

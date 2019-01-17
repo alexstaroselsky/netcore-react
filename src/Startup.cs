@@ -6,11 +6,13 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using NutritionaData.Backend.Repositories;
+using NutritionData.Backend.Data;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace NutritionaData.Backend
@@ -28,6 +30,8 @@ namespace NutritionaData.Backend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddDbContext<NutritionDataContext>(options => options.UseSqlite("Data Source=nutrition.db"));
 
             services.AddScoped<IFoodGroupRepository, FoodGroupRepository>();
 
