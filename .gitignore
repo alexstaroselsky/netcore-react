@@ -42,3 +42,7 @@ Thumbs.db
 
 # SQLite
 *.db
+
+# Nutrition source data files
+src/Data/*.txt
+
