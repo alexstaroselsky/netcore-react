@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace NutritionaData.Backend.Models
+namespace NutritionData.Backend.Models
 {
     public class Footnote
     {

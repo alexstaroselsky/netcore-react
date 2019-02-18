@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using NutritionaData.Backend.Models;
+using NutritionData.Backend.Models;
+using NutritionData.Backend.Repositories;
 
 namespace NutritionaData.Backend.Repositories
 {

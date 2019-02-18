@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace NutritionaData.Backend.Models
+namespace NutritionData.Backend.Models
 {
     public class NutrientDefinition
     {

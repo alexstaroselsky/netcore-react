@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using NutritionaData.Backend.Models;
 
 namespace NutritionData.Backend.Models.food
 {

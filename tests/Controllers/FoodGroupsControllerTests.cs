@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Moq;
-using NutritionaData.Backend.Models;
-using NutritionaData.Backend.Repositories;
+using NutritionData.Backend.Models;
+using NutritionData.Backend.Repositories;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xunit;

@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using NutritionaData.Backend.Models;
 
 namespace NutritionData.Backend.Models.food
 {

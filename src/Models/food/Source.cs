@@ -1,14 +1,18 @@
-﻿namespace NutritionData.Backend.Models.food
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace NutritionData.Backend.Models.food
 {
     public class Source
     {
-        public string SourceId { get; set; }
+        [Key]
+        public string SourceId { get; set; } // DataSrc_ID
         public string Title { get; set; }
-        public string Authors { get; set; }
-        public string Volume { get; set; }
-        public string Issue { get; set; }
+        public string Journal { get; set; }
+        public string Authors { get; set; } // comma separated
+        public string Volume { get; set; } // Vol_City
+        public string Issue { get; set; } // Issue_State
         public string Year { get; set; }
-        public string StartPage { get; set; }
-        public string EndPage { get; set; }
+        public string StartPage { get; set; } // Start_Page
+        public string EndPage { get; set; } // End_Page
     }
 }
