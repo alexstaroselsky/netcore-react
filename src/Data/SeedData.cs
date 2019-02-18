@@ -23,6 +23,9 @@ namespace NutritionData.Backend.Data
 
                 List<Weight> weights = GetWeights();
                 List<SourceCode> sourceCodes = GetSourceCodes();
+                List<Source> sources = GetDataSources();
+                List<Footnote> footnotes = GetFootnotes();
+                List<FoodGroup> foodGroups = GetFoodGroups();
             }
         }
 
@@ -75,6 +78,52 @@ namespace NutritionData.Backend.Data
                     Issue = columns[6].Replace("~", ""),
                     StartPage = columns[7].Replace("~", ""),
                     EndPage = columns[8].Replace("~", "")
+                })
+                .ToList();
+        }
+
+        public static List<Footnote> GetFootnotes()
+        {
+            return System.IO.File.ReadAllLines(@"Data/FOOTNOTE.txt")
+                .Select(row => row.Split('^'))
+                .Select(columns => new Footnote
+                {
+                    NDBNumber = columns[0].Replace("~", ""),
+                    SequenceNumber = columns[1].Replace("~", ""),
+                    Type = columns[2].Replace("~", ""),
+                    NutrientNumber = columns[3].Replace("~", ""),
+                    Text = columns[4].Replace("~", "")
+                })
+                .ToList();
+        }
+
+        public static List<FoodGroup> GetFoodGroups()
+        {
+            return System.IO.File.ReadAllLines(@"Data/FD_GROUP.txt")
+                .Select(row => row.Split('^'))
+                .Select(columns => new FoodGroup
+                {
+                    FoodGroupId = columns[0].Replace("~", ""),
+                    Name = columns[1].Replace("~", "")
+                })
+                .ToList();
+        }
+
+        public static List<Description> GetFoodDescriptions()
+        {
+            return System.IO.File.ReadAllLines(@"Data/FD_GROUP.txt")
+                .Select(row => row.Split('^'))
+                .Select(columns => new Description
+                {
+                    NDBNumber = columns[0].Replace("~", ""),
+                    LongDescription = columns[2].Replace("~", ""),
+                    ShortDescription = columns[3].Replace("~", ""),
+                    CommonName = columns[4].Replace("~", ""),
+                    Manufacturer = columns[5].Replace("~", ""),
+                    Survey = columns[6].Replace("~", "").Equals("Y"),
+                    RefuseDescription = columns[7].Replace("~", ""),
+                    RefusePercent = Double.TryParse(columns[8], out double amount) ? amount : -1,
+                    ScientificName = columns[9].Replace("~", "")
                 })
                 .ToList();
         }

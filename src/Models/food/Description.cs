@@ -5,7 +5,9 @@ namespace NutritionData.Backend.Models.food
     public class Description
     {
         [Key]
-        public string DescriptionId { get; set; } // NDB_No
+        public string DescriptionId { get; set; }
+        [Required]
+        public string NDBNumber { get; set; }
         [Required]
         public string ShortDescription { get; set; } // Shrt_Desc
         [Required]
